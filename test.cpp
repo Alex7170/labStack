@@ -1,28 +1,22 @@
 #include <iostream>
 #include <string>
-// TODO подключить модули и после этого удалить мейн в експортах
-// #include <cherga>  
-// #include <stack>
+#include "stack.h"
+#include "cherga.h"
 
+using namespace std;
 
-/**
- * Для спрощення коди було вирiшено
- * не використовувати google test
- * або iншi.
-*/
-int main(){
-    // tests for stack.cpp
+int main() {
+    // Tests for stack.cpp
     string base = "Добрий день!";
     string reversed = reverseString(base);
-    cout << reversed;     
+    cout << reversed << endl;
 
-    
-    // tests for cherga.cpp
+    // Tests for cherga.cpp
     Queue newQueue;
     newQueue.dequeue();
     newQueue.enqueue("Привiт");
     newQueue.enqueue("Як справи");
-    while (!newQueue.isEmpty()){
+    while (!newQueue.isEmpty()) {
         cout << newQueue.dequeue() << "\n";
     }
     return 0;
